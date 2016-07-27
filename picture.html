@@ -7,19 +7,22 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="instafeed.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
-		var pathHash = document.location.search;
-		var access_token_var = pathHash.substring(6);
 
-		var feed = new Instafeed({
+		var userFeed = new Instafeed({
+			var pathHash = document.location.search;
+			var access_token_var = pathHash.substring(6);
 			get: "user",
-			userId: "3585915575"
+			userId: "3585915575",
 			accessToken: access_token_var,
 			limit: 1
 			resolution: standard_resolution,
 			useHttp: true
 			});
 	</script>
-	feed.run();
+	
+	var pathHash = document.location.search;
+	var access_token_var = pathHash.substring(6);
+	userFeed.run();
 </head>
 
 <body>
